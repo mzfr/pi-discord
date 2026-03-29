@@ -1,0 +1,29 @@
+{
+  "name": "pi-discord",
+  "version": "0.1.0",
+  "description": "Discord bot daemon + pi extension for remote pi session control",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "daemon": "node --enable-source-maps dist/daemon/main.js",
+    "daemon:dev": "tsx --watch src/daemon/main.ts"
+  },
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "@types/node": "^22.15.0",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  },
+  "pi": {
+    "extensions": [
+      "./src/extension/index.ts"
+    ]
+  }
+}
