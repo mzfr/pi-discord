@@ -1,0 +1,21 @@
+{
+  "name": "pi-discord",
+  "version": "0.1.0",
+  "description": "Single-file pi extension that connects a live pi session to Discord.",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@earendil-works/pi-tui": "0.77.0",
+    "discord.js": "^14.18.0"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "0.77.0",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.0"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  }
+}
